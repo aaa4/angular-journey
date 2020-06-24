@@ -10,8 +10,10 @@ export class AccountWorkerService {
   constructor(private http: HttpClient) {
   }
 
-  getData(): Observable<Account[]> {
-    const href = 'http://localhost:8080/users';
+  // example url:  http://localhost:8080/users/paginated?sort=name&order=asc&page=1
+  getData(sort: string, order: string, page: number): Observable<Account[]> {
+    // old // const href = 'http://localhost:8080/users';
+    const href = `http://localhost:8080/users/paginated?sort=${sort}&order=${order}&page=${page}`;
     return this.http.get<Account[]>(href);
   }
 }

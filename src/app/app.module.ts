@@ -6,15 +6,18 @@ import {AppComponent} from './app.component';
 import {AccountDataComponent} from './account-data/account-data.component';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatPaginatorModule, MatProgressSpinnerModule, MatSortModule, MatTableModule} from '@angular/material';
-import { PaginationTableComponent } from './pagination-table/pagination-table.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatSortModule} from '@angular/material/sort';
+import {MatTableModule} from '@angular/material/table';
+import {PageableTableComponent} from './pageable-table/pageable-table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AccountDataComponent,
-    PaginationTableComponent
+    PageableTableComponent
   ],
   imports: [
     BrowserModule,
@@ -30,4 +33,5 @@ import { PaginationTableComponent } from './pagination-table/pagination-table.co
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
